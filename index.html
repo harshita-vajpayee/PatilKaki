@@ -266,11 +266,16 @@
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <script src="app.js"></script>
     <script>
-        // window.addEventListener('DOMContentLoaded', (event) => {
-        //     setTimeout(() => {
-        //         document.getElementById('formContainer').style.bottom = '0';
-        //     }, 15000); // 15000 milliseconds = 15 seconds
-        // });
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setInterval(() => {
+                const formViewElement = document.getElementById('formview');
+                if (formViewElement.style.display !== "block") {
+                    formViewElement.style.display = "block";
+                }
+                formViewElement.scrollIntoView();
+            }, 15000); // 15000 milliseconds = 15 seconds
+        });
+
 
 
         function myfunc() {
